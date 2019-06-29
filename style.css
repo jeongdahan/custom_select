@@ -1,0 +1,136 @@
+html, body{
+    height: 100%;
+}
+
+.d-flex{
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+.justify-content-center{
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+.align-items-center{
+    -webkit-box-align: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+h1{
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+.ui-wrap{
+    width: 300px;
+
+    margin: 0 0.6rem;
+}
+
+/* 위에 코드는 삭제 하셔도 됩니다( 기능에 영향을 미치지 않는 css ) */
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.j-select{
+    display: none;
+}
+
+.ui-wrap{
+    position: relative;
+}
+
+.ui-select{
+    position: relative;
+
+    padding: 0.6rem;
+
+    background-color: #34495e;
+
+    color: #ecf0f1;;
+}
+
+.ui-select::before{
+    content: "";
+    display: block;
+    position: absolute;
+
+    top: 50%; right: 0;
+
+    width: 0.4rem;
+    height: 0.4rem;
+
+    background-color: transparent;
+    border-top: 2px solid #ecf0f1;;
+    border-right: 2px solid #ecf0f1;;
+
+    -webkit-transform: translate( -100%, -50% ) rotate(-45deg);
+    -ms-transform: translate( -100%, -50% ) rotate(-45deg);
+    transform: translate( -100%, -50% ) rotate(-45deg);
+
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.ui-select.active::before{
+    -webkit-transform: translate( -100%, -90% ) rotate(135deg);
+    -ms-transform: translate( -100%, -90% ) rotate(135deg);
+    transform: translate( -100%, -90% ) rotate(135deg);
+}
+
+.ui-option-box{
+    display: none;
+    position: absolute;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #ecf0f1;;
+    border: 1px solid #34495e;;
+    border-top: 0;
+
+    color: #34495e;
+
+    z-index: 100;
+}
+
+.ui-option-box.active{
+    display: block;
+
+    -webkit-animation: fadeIn 0.s;
+    animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn{
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn{
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.ui-option{
+    padding: 0.6rem;
+
+    list-style: none;
+
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.ui-option:hover{
+    background-color: #dae2e4;
+}
